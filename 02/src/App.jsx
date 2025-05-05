@@ -9,6 +9,7 @@ import './components/StyleComponents/css/style.css'
 import StyledComponents from "./components/StyleComponents/StyledComponents"
 import UseRefHook, { StopWatch } from "./components/UseRefHook"
 import UncontrolledComponent from "./components/UncontrolledComponent"
+import FunctionAsProp from "./components/FunctionAsProp"
 
 const App = () => {
   return (
@@ -32,7 +33,7 @@ const App = () => {
       {/* <UseRefHook /> */}
       {/* <StopWatch /> */}
 
-      <UncontrolledComponent />
+      <FunctionAsProp />
     </>
   )
 }
