@@ -8,6 +8,7 @@ import UseEffectProps from "./components/useEffect/UseEffectProps"
 import './components/StyleComponents/css/style.css'
 import StyledComponents from "./components/StyleComponents/StyledComponents"
 import UseRefHook, { StopWatch } from "./components/UseRefHook"
+import UncontrolledComponent from "./components/UncontrolledComponent"
 
 const App = () => {
   return (
@@ -30,6 +31,8 @@ const App = () => {
 
       {/* <UseRefHook /> */}
       {/* <StopWatch /> */}
+
+      <UncontrolledComponent />
     </>
   )
 }
