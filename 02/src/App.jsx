@@ -6,6 +6,8 @@ import ModuleStyle from "./components/StyleComponents/ModuleStyle"
 import UseEffectHook from "./components/useEffect/UseEffectHook"
 import UseEffectProps from "./components/useEffect/UseEffectProps"
 import './components/StyleComponents/css/style.css'
+import StyledComponents from "./components/StyleComponents/StyledComponents"
+import UseRefHook, { StopWatch } from "./components/UseRefHook"
 
 const App = () => {
   return (
@@ -20,9 +22,14 @@ const App = () => {
 
       {/* <DynamicAndConditionalStyle /> */}
 
-      <ExternalStyle />
+      {/* <ExternalStyle /> */}
 
-      <ModuleStyle />
+      {/* <ModuleStyle /> */}
+
+      {/* <StyledComponents /> */}
+
+      {/* <UseRefHook /> */}
+      {/* <StopWatch /> */}
     </>
   )
 }
