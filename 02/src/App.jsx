@@ -10,6 +10,7 @@ import StyledComponents from "./components/StyleComponents/StyledComponents"
 import UseRefHook, { StopWatch } from "./components/UseRefHook"
 import UncontrolledComponent from "./components/UncontrolledComponent"
 import FunctionAsProp from "./components/FunctionAsProp"
+import ForwardRef from "./components/ForwardRef"
 
 const App = () => {
   return (
@@ -33,7 +34,9 @@ const App = () => {
       {/* <UseRefHook /> */}
       {/* <StopWatch /> */}
 
-      <FunctionAsProp />
+      {/* <FunctionAsProp /> */}
+
+      <ForwardRef />
     </>
   )
 }
