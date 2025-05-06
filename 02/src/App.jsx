@@ -16,6 +16,7 @@ import UseTransitionHook from "./components/UseTransitionHook"
 import PureComponent from "./components/PureComponent"
 import DerivedState from "./components/DerivedState"
 import LiftingState from "./components/LiftingState"
+import UpdatingObjectState from "./components/UpdatingObjectState"
 
 const App = () => {
   return (
@@ -52,6 +53,8 @@ const App = () => {
       {/* <DerivedState /> */}
 
       {/* <LiftingState /> */}
+
+      {/* <UpdatingObjectState /> */}
     </>
   )
 }
