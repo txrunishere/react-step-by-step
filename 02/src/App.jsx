@@ -11,6 +11,7 @@ import UseRefHook, { StopWatch } from "./components/UseRefHook"
 import UncontrolledComponent from "./components/UncontrolledComponent"
 import FunctionAsProp from "./components/FunctionAsProp"
 import ForwardRef from "./components/ForwardRef"
+import UseFormStatusHook from "./components/UseFormStatusHook"
 
 const App = () => {
   return (
@@ -36,7 +37,9 @@ const App = () => {
 
       {/* <FunctionAsProp /> */}
 
-      <ForwardRef />
+      {/* <ForwardRef /> */}
+
+      <UseFormStatusHook />
     </>
   )
 }
