@@ -17,6 +17,7 @@ import PureComponent from "./components/PureComponent"
 import DerivedState from "./components/DerivedState"
 import LiftingState from "./components/LiftingState"
 import UpdatingObjectState from "./components/UpdatingObjectState"
+import UseIdHook from "./components/UseIdHook"
 
 const App = () => {
   return (
@@ -55,6 +56,8 @@ const App = () => {
       {/* <LiftingState /> */}
 
       {/* <UpdatingObjectState /> */}
+
+      <UseIdHook />
     </>
   )
 }
