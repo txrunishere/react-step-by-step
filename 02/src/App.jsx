@@ -15,6 +15,7 @@ import UseFormStatusHook from "./components/UseFormStatusHook"
 import UseTransitionHook from "./components/UseTransitionHook"
 import PureComponent from "./components/PureComponent"
 import DerivedState from "./components/DerivedState"
+import LiftingState from "./components/LiftingState"
 
 const App = () => {
   return (
@@ -48,7 +49,9 @@ const App = () => {
 
       {/* <PureComponent /> */}
 
-      <DerivedState />
+      {/* <DerivedState /> */}
+
+      {/* <LiftingState /> */}
     </>
   )
 }
