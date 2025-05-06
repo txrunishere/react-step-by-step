@@ -14,6 +14,7 @@ import ForwardRef from "./components/ForwardRef"
 import UseFormStatusHook from "./components/UseFormStatusHook"
 import UseTransitionHook from "./components/UseTransitionHook"
 import PureComponent from "./components/PureComponent"
+import DerivedState from "./components/DerivedState"
 
 const App = () => {
   return (
@@ -46,6 +47,8 @@ const App = () => {
       {/* <UseTransitionHook /> */}
 
       {/* <PureComponent /> */}
+
+      <DerivedState />
     </>
   )
 }
