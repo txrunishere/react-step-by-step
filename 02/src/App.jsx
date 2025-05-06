@@ -12,6 +12,7 @@ import UncontrolledComponent from "./components/UncontrolledComponent"
 import FunctionAsProp from "./components/FunctionAsProp"
 import ForwardRef from "./components/ForwardRef"
 import UseFormStatusHook from "./components/UseFormStatusHook"
+import UseTransitionHook from "./components/UseTransitionHook"
 
 const App = () => {
   return (
@@ -39,7 +40,9 @@ const App = () => {
 
       {/* <ForwardRef /> */}
 
-      <UseFormStatusHook />
+      {/* <UseFormStatusHook /> */}
+
+      <UseTransitionHook />
     </>
   )
 }
