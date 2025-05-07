@@ -4,7 +4,7 @@ import EditInput from "./EditInput";
 import TodoList from "./TodoList";
 
 const Todo = () => {
-  const [todos, setTodos] = useState(new Set());
+  const [todos, setTodos] = useState([]);
   const [todoValue, setTodoValue] = useState("");
   const [editValue, setEditValue] = useState("");
   const [editIndex, setEditIndex] = useState(null);
