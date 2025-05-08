@@ -1,17 +1,53 @@
-import { useId } from "react";
+import { useContext, useId, useState } from "react";
+import { BalanceContext } from "../context/BalanceContextProvider";
 
-const expenceForm = ({ expenseData }) => {
+const ExpenceForm = ({ expenseList, setExpenseList }) => {
+  const context = useContext(BalanceContext);
+  const [expenseInput, setExpenseInput] = useState("");
+  const [amountInput, setAmountInput] = useState(0);
+  const [expenseOption, setExpenseOption] = useState("");
   const id = useId();
 
-  const {
-    expenseList,
-    expenseInput,
-    amountInput,
-    handleExpenseInput, // fn
-    handleAmountInput, // fn
-    handleExpenseOption, // fn
-    handleForm // fn
-  } = expenseData;
+  const { balanceData, setBalanceData } = context;
+
+  const handleExpenseInput = (e) => {
+    setExpenseInput(e.target.value);
+  };
+
+  const handleAmountInput = (e) => {
+    setAmountInput(e.target.value);
+  };
+
+  const handleExpenseOption = (e) => {
+    setExpenseOption(e.target.value);
+  };
+
+  const handleForm = (e) => {
+    e.preventDefault();
+    if (expenseInput && amountInput && expenseOption) {
+      setExpenseList([
+        ...expenseList,
+        {
+          expenseOption: expenseOption,
+          expenseField: expenseInput,
+          expenseAmount: parseInt(amountInput),
+        },
+      ]);
+    }
+    if (expenseOption === "Income") {
+      context.setBalanceData({
+        ...balanceData,
+        balance: balanceData.balance + parseInt(amountInput),
+        income: balanceData.income + parseInt(amountInput),
+      });
+    } else {
+      setBalanceData({
+        ...balanceData,
+        expenses: balanceData.expenses + parseInt(amountInput),
+        balance: balanceData.balance - parseInt(amountInput),
+      });
+    }
+  };
 
   return (
     <div>
@@ -64,4 +100,4 @@ const expenceForm = ({ expenseData }) => {
   );
 };
 
-export default expenceForm;
+export default ExpenceForm;
