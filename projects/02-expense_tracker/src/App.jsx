@@ -33,11 +33,19 @@ const App = () => {
         {
           expenseOption: expenseOption,
           expenseField: expenseInput,
-          expenseAmount: amountInput,
+          expenseAmount: parseInt(amountInput),
         },
       ]);
     }
-    
+    if (expenseOption === "Income") {
+      setBalanceData({...balanceData, balance: balanceData.balance + parseInt(amountInput), income: balanceData.income + parseInt(amountInput)})
+    } else {
+      if (parseInt(amountInput) > balanceData.balance) {
+        alert("Chala ja BSDK...")
+      } else {
+        setBalanceData({...balanceData, expenses: balanceData.expenses + parseInt(amountInput), balance: balanceData.balance - parseInt(amountInput)})
+      }
+    }
   };
 
   console.table([expenseInput, amountInput, expenseOption]);
