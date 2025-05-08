@@ -1,17 +1,18 @@
-import { useState } from "react";
+import { useContext } from "react";
 import ExpenceForm from "./ExpenceForm";
+import { BalanceContext } from "../context/BalanceContextProvider";
 
 const ExpenceList = () => {
-  const [expenseList, setExpenseList] = useState([])
+  const context = useContext(BalanceContext)
 
   return (
     <>
       <section className="w-[85%] flex flex-col gap-[20px] items-center justify-center">
-        <ExpenceForm expenseList={expenseList} setExpenseList={setExpenseList} />
+        <ExpenceForm />
         <div className="">
           <main className="border-2 overflow-scroll overflow-x-hidden h-[50vh] w-[50vw] p-[10px]">
             <ul>
-              {expenseList.map((item, index) => (
+              {context.expenseList.map((item, index) => (
                 <li key={index}>
                   <span className="text-2xl">{item.expenseField}</span>
                   <br />

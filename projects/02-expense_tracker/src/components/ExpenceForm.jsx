@@ -1,14 +1,14 @@
 import { useContext, useId, useState } from "react";
 import { BalanceContext } from "../context/BalanceContextProvider";
 
-const ExpenceForm = ({ expenseList, setExpenseList }) => {
+const ExpenceForm = () => {
   const context = useContext(BalanceContext);
   const [expenseInput, setExpenseInput] = useState("");
   const [amountInput, setAmountInput] = useState(0);
   const [expenseOption, setExpenseOption] = useState("");
   const id = useId();
 
-  const { balanceData, setBalanceData } = context;
+  const { balanceData, setBalanceData, expenseList, setExpenseList } = context;
 
   const handleExpenseInput = (e) => {
     setExpenseInput(e.target.value);
