@@ -9,13 +9,7 @@ import Sidebar from "./components/Sidebar/Sidebar";
 // }
 
 const App = () => {
-  const [expenseList, setExpenseList] = useState([
-    {
-      expenseOption: "Income",
-      expenseField: "Plumber",
-      expenseAmount: "20",
-    },
-  ]);
+  const [expenseList, setExpenseList] = useState([]);
   const [expenseInput, setExpenseInput] = useState("");
   const [amountInput, setAmountInput] = useState(0);
   const [expenseOption, setExpenseOption] = useState("");
@@ -48,7 +42,7 @@ const App = () => {
     }
   };
 
-  console.table([expenseInput, amountInput, expenseOption]);
+  // console.table([expenseInput, amountInput, expenseOption]);
 
   const handleExpenseInput = (e) => {
     setExpenseInput(e.target.value);
