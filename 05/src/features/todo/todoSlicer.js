@@ -16,15 +16,15 @@ export const todoSlice = createSlice({
     addTodo: (state, action) => {
       const todo = {
         id: nanoid(),
-        task: action.payload.task,
+        task: action.payload,
       };
       state.todos.push(todo);
     },
     deleteTodo: (state, action) => {
-      state.todos = state.todos.filter((todo) => todo.id !== action.payload.id);
+      state.todos = state.todos.filter((todo) => todo.id !== action.payload);
     },
     editTodo: (state, action) => {
-      const id = action.payload.id;
+      const id = action.payload ;
       state.todos.filter((todo) =>
         todo.id === id ? (todo.task = action.payload.updatedTask) : todo
       );
