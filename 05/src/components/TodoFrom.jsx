@@ -1,19 +1,21 @@
 import { useState } from "react";
-import { useDispatch } from 'react-redux'
-import { addTodo } from '../features/todo/todoSlicer'
+import { useDispatch } from "react-redux";
+import { addTodo } from "../features/todo/todoSlicer";
 
 export default function TodoFrom() {
   const [todoValue, setTodoValue] = useState("");
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const handleFrom = (e) => {
     e.preventDefault();
-    dispatch(addTodo(todoValue))
-    setTodoValue('')
+    if (todoValue) {
+      dispatch(addTodo(todoValue));
+      setTodoValue("");
+    }
   };
 
   return (
-    <div>
+    <div className="flex items-center justify-center">
       <form onSubmit={handleFrom}>
         <input
           className="mr-2 outline-none rounded-xl border px-2 py-1"
